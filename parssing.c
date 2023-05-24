@@ -20,11 +20,11 @@ char **parse_cmd(char *input)
 		return (NULL);
 	}
 
-	token = _strtok(input, "\n ");
+	token = my_strtok(input, "\n ");
 	for (i = 0; token; i++)
 	{
 		tokens[i] = token;
-		token = _strtok(NULL, "\n ");
+		token = my_strtok(NULL, "\n ");
 	}
 	tokens[i] = NULL;
 

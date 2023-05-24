@@ -21,7 +21,7 @@ int handle_builtin(char **cmd, int er)
 
 	while ((bil + i)->command)
 	{
-		if (_strcmp(cmd[0], (bil + i)->command) == 0)
+		if (my_strcmp(cmd[0], (bil + i)->command) == 0)
 		{
 			return ((bil + i)->fun(cmd, er));
 		}

@@ -12,14 +12,14 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
- * _strncpy - copie a string
+ * my_strncpy - copie a string
  * @dest:char
  *  @src:char
  * @n:int
  * Return:char
  */
 
-char *_strncpy(char *dest, char *src, int n)
+char *my_strncpy(char *dest, char *src, int n)
 {
 int i;
 
@@ -38,12 +38,12 @@ i = 0;
 }
 
 /**
- * _strlen - lenght of string
+ * my_strlen - lenght of string
  * @s:char
  * Return:int
  */
 
-int _strlen(char *s)
+int my_strlen(char *s)
 {
 	int i;
 

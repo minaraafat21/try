@@ -19,7 +19,7 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 	}
 	while (cmd[1][i])
 	{
-		if (_isalpha(cmd[1][i++]) != 0)
+		if (_isalphabetic(cmd[1][i++]) != 0)
 		{
 			_prerror(argv, c, cmd);
 			break;
@@ -36,10 +36,10 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 
 
 /**
- * change_dir - Change Dirctorie
- * @cmd: Parsed Command
- * @er: Statue Last Command Excuted
- * Return: 0 Succes 1 Failed (For Old Pwd Always 0 Case No Old PWD)
+ * change_dir - Change Directory
+ * @cmd: Command
+ * @er: Status of the Last Command Excuted
+ * Return: 0 Succes 1 Failed
  */
 int change_dir(char **cmd, __attribute__((unused))int er)
 {
@@ -48,7 +48,7 @@ int change_dir(char **cmd, __attribute__((unused))int er)
 
 	if (cmd[1] == NULL)
 		value = chdir(getenv("HOME"));
-	else if (_strcmp(cmd[1], "-") == 0)
+	else if (my_strcmp(cmd[1], "-") == 0)
 	{
 		value = chdir(getenv("OLDPWD"));
 	}
@@ -81,7 +81,7 @@ size_t i;
 
 	for (i = 0; environ[i] != NULL; i++)
 	{
-		len = _strlen(environ[i]);
+		len = my_strlen(environ[i]);
 		write(1, environ[i], len);
 		write(STDOUT_FILENO, "\n", 1);
 	}

@@ -27,7 +27,7 @@ int main(__attribute__((unused)) int argc, char **argv)
 		}
 		history(input);
 		cmd = parse_cmd(input);
-		if (_strcmp(cmd[0], "exit") == 0)
+		if (my_strcmp(cmd[0], "exit") == 0)
 		{
 			exit_bul(cmd, input, argv, counter);
 		}
@@ -69,7 +69,7 @@ int check_builtin(char **cmd)
 
 	while ((fun + i)->command)
 	{
-		if (_strcmp(cmd[0], (fun + i)->command) == 0)
+		if (my_strcmp(cmd[0], (fun + i)->command) == 0)
 			return (0);
 		i++;
 	}

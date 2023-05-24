@@ -11,7 +11,7 @@ int path_cmd(char **cmd)
 	struct stat buf;
 
 	path = _getenv("PATH");
-	value = _strtok(path, ":");
+	value = my_strtok(path, ":");
 	while (value != NULL)
 	{
 		cmd_path = build(*cmd, value);
@@ -23,7 +23,7 @@ int path_cmd(char **cmd)
 			return (0);
 		}
 		free(cmd_path);
-		value = _strtok(NULL, ":");
+		value = my_strtok(NULL, ":");
 	}
 	free(path);
 
@@ -41,7 +41,7 @@ char *build(char *token, char *value)
 	char *cmd;
 	size_t len;
 
-	len = _strlen(value) + _strlen(token) + 2;
+	len = my_strlen(value) + my_strlen(token) + 2;
 	cmd = malloc(sizeof(char) * len);
 	if (cmd == NULL)
 	{
@@ -50,9 +50,9 @@ char *build(char *token, char *value)
 
 	memset(cmd, 0, len);
 
-	cmd = _strcat(cmd, value);
-	cmd = _strcat(cmd, "/");
-	cmd = _strcat(cmd, token);
+	cmd = my_strcat(cmd, value);
+	cmd = my_strcat(cmd, "/");
+	cmd = my_strcat(cmd, token);
 
 	return (cmd);
 }
@@ -67,12 +67,12 @@ char *_getenv(char *name)
 	char *value;
 	int i, x, j;
 
-	nl = _strlen(name);
+	nl = my_strlen(name);
 	for (i = 0 ; environ[i]; i++)
 	{
 		if (_strncmp(name, environ[i], nl) == 0)
 		{
-			vl = _strlen(environ[i]) - nl;
+			vl = my_strlen(environ[i]) - nl;
 			value = malloc(sizeof(char) * vl);
 			if (!value)
 			{

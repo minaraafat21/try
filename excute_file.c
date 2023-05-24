@@ -79,7 +79,7 @@ void exit_bul_for_file(char **cmd, char *line, FILE *fd)
 	}
 	while (cmd[1][i])
 	{
-		if (_isalpha(cmd[1][i++]) < 0)
+		if (_isalphabetic(cmd[1][i++]) < 0)
 		{
 			perror("illegal number");
 		}

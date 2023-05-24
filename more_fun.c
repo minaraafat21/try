@@ -1,11 +1,11 @@
 #include "shell.h"
 /**
- * _strcpy - Copie Source To Destination Char
+ * my_strcpy - Copie Source To Destination Char
  * @dest:Destination
  * @src:Source
  * Return: Copie Of Char *
  */
-char *_strcpy(char *dest, char *src)
+char *my_strcpy(char *dest, char *src)
 {
 int i;
 
@@ -19,12 +19,12 @@ dest[i] = '\0';
 return (dest);
 }
 /**
- * _strcat - Concat Two String
+ * my_strcat - Concat Two String
  * @dest:First String
  * @src:Second String
  * Return:First String + Second String Char *
  */
-char *_strcat(char *dest, char *src)
+char *my_strcat(char *dest, char *src)
 {
 	char *s = dest;
 
@@ -43,12 +43,12 @@ char *_strcat(char *dest, char *src)
 	return (s);
 }
 /**
- * _strchr - Locate Charactere In String
+ * my_strchr - Locate Charactere In String
  * @s:String Search In
  * @c:Char To Search For
  * Return: Pointer To Char*
  */
-char *_strchr(char *s, char c)
+char *my_strchr(char *s, char c)
 {
 
 	do		{
@@ -94,7 +94,7 @@ char *_strdup(char *str)
 	size_t len, i;
 	char *str2;
 
-	len = _strlen(str);
+	len = my_strlen(str);
 	str2 = malloc(sizeof(char) * (len + 1));
 	if (!str2)
 	{

@@ -9,7 +9,7 @@ extern char **environ;
 
 #define BUFSIZE 1024
 #define DELIM " \t\r\n\a"
-#define PRINTER(c) (write(STDOUT_FILENO, c, _strlen(c)))
+#define PRINTER(c) (write(STDOUT_FILENO, c, my_strlen(c)))
 
 /**###### LIBS USED ######*/
 
@@ -31,21 +31,21 @@ extern char **environ;
 
 /**###### STRING FUNCTION ######*/
 
-char *_strtok(char *str, const char *tok);
-unsigned int check_delim(char c, const char *str);
-char *_strncpy(char *dest, char *src, int n);
-int _strlen(char *s);
+char *my_strtok(char *str, const char *tok);
+unsigned int delim_check(char c, const char *str);
+char *my_strncpy(char *dest, char *src, int n);
+int my_strlen(char *s);
 int _putchar(char c);
 int _atoi(char *s);
 void _puts(char *str);
-int _strcmp(char *s1, char *s2);
-int _isalpha(int c);
-void array_rev(char *arr, int len);
-int intlen(int num);
+int my_strcmp(char *s1, char *s2);
+int _isalphabeticbetic(int c);
+void reverse_array(char *arr, int len);
+int intlength(int num);
 char *_itoa(unsigned int n);
-char *_strcat(char *dest, char *src);
-char *_strcpy(char *dest, char *src);
-char *_strchr(char *s, char c);
+char *my_strcat(char *dest, char *src);
+char *my_strcpy(char *dest, char *src);
+char *my_strchr(char *s, char c);
 int _strncmp(const char *s1, const char *s2, size_t n);
 char *_strdup(char *str);
 
