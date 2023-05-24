@@ -1,12 +1,17 @@
 #include "shell.h"
 /**
- * exit_bul - Exit Statue Shell
- * @cmd: Parsed Command
- * @input: User Input
- * @argv:Program Name
- * @c:Excute Count
- * Return: Void (Exit Statue)
+ * exit_bul - Exit Shell
+ * 
+ * This function is responsible for exiting the shell program.
+ * 
+ * @cmd: The parsed command.
+ * @input: input.
+ * @argv: Program name.
+ * @c: Execute count.
+ * 
+ * Return: Void (Exits the shell).
  */
+
 void  exit_bul(char **cmd, char *input, char **argv, int c)
 {
 	int statue, i = 0;
@@ -33,13 +38,15 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 		}
 	}
 }
-
-
 /**
  * change_dir - Change Directory
- * @cmd: Command
- * @er: Status of the Last Command Excuted
- * Return: 0 Succes 1 Failed
+ * 
+ * This function is responsible for changing the current working directory.
+ * 
+ * @cmd: The command.
+ * @er: The status of the last executed command.
+ * 
+ * Return: 0 for success, 1 for failure.
  */
 int change_dir(char **cmd, __attribute__((unused))int er)
 {
@@ -69,10 +76,14 @@ int change_dir(char **cmd, __attribute__((unused))int er)
 	return (0);
 }
 /**
- * dis_env - Display Enviroment Variable
- * @cmd:Parsed Command
- * @er:Statue of Last command Excuted
- * Return:Always 0
+ * dis_env - Display Environment Variables
+ * 
+ * This function is responsible for displaying environment variables.
+ * 
+ * @cmd: The parsed command.
+ * @er: The status of the last executed command.
+ * 
+ * Return: Always 0.
  */
 int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int er)
 {
@@ -88,10 +99,14 @@ size_t i;
 	return (0);
 }
 /**
- * display_help - Displaying Help For Builtin
- * @cmd:Parsed Command
- * @er: Statue Of Last Command Excuted
- * Return: 0 Succes -1 Fail
+ * display_help - Display Help for Built-in Commands
+ * 
+ * This function is responsible for displaying help information for built-in commands.
+ * 
+ * @cmd: The parsed command.
+ * @er: The status of the last executed command.
+ * 
+ * Return: 0 for success, -1 for failure.
  */
 int display_help(char **cmd, __attribute__((unused))int er)
 {
@@ -117,10 +132,14 @@ int display_help(char **cmd, __attribute__((unused))int er)
 	return (0);
 }
 /**
- * echo_bul - Excute Echo Cases
- * @st:Statue Of Last Command Excuted
- * @cmd: Parsed Command
- * Return: Always 0 Or Excute Normal Echo
+ * echo_bul - Execute the Echo Command
+ * 
+ * This function is responsible for executing echo commands and handling different cases.
+ * 
+ * @st: The status of the last executed command.
+ * @cmd: The parsed command.
+ * 
+ * Return: Always 0 or execute the echo command normally.
  */
 int echo_bul(char **cmd, int st)
 {
