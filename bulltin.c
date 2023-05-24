@@ -1,14 +1,11 @@
 #include "shell.h"
 /**
  * exit_bul - Exit Shell
- * 
  * This function is responsible for exiting the shell program.
- * 
  * @cmd: The parsed command.
  * @input: input.
  * @argv: Program name.
  * @c: Execute count.
- * 
  * Return: Void (Exits the shell).
  */
 
@@ -40,12 +37,9 @@ void  exit_bul(char **cmd, char *input, char **argv, int c)
 }
 /**
  * change_dir - Change Directory
- * 
  * This function is responsible for changing the current working directory.
- * 
  * @cmd: The command.
  * @er: The status of the last executed command.
- * 
  * Return: 0 for success, 1 for failure.
  */
 int change_dir(char **cmd, __attribute__((unused))int er)
@@ -77,12 +71,9 @@ int change_dir(char **cmd, __attribute__((unused))int er)
 }
 /**
  * dis_env - Display Environment Variables
- * 
  * This function is responsible for displaying environment variables.
- * 
  * @cmd: The parsed command.
  * @er: The status of the last executed command.
- * 
  * Return: Always 0.
  */
 int dis_env(__attribute__((unused)) char **cmd, __attribute__((unused)) int er)
@@ -100,12 +91,9 @@ size_t i;
 }
 /**
  * display_help - Display Help for Built-in Commands
- * 
- * This function is responsible for displaying help information for built-in commands.
- * 
+ * This function is responsible for displaying help information
  * @cmd: The parsed command.
  * @er: The status of the last executed command.
- * 
  * Return: 0 for success, -1 for failure.
  */
 int display_help(char **cmd, __attribute__((unused))int er)
@@ -133,12 +121,9 @@ int display_help(char **cmd, __attribute__((unused))int er)
 }
 /**
  * echo_bul - Execute the Echo Command
- * 
  * This function is responsible for executing echo commands and handling different cases.
- * 
  * @st: The status of the last executed command.
  * @cmd: The parsed command.
- * 
  * Return: Always 0 or execute the echo command normally.
  */
 int echo_bul(char **cmd, int st)
