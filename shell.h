@@ -39,7 +39,7 @@ int _putchar(char c);
 int _atoi(char *s);
 void _puts(char *str);
 int my_strcmp(char *s1, char *s2);
-int _isalphabeticbetic(int c);
+int _isalphabetic(int c);
 void reverse_array(char *arr, int len);
 int intlength(int num);
 char *_itoa(unsigned int n);
